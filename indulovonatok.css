@@ -1,0 +1,8 @@
+table, th, td {
+    background-color: blue;
+    color:white
+}
+
+.masodiksorok{
+    background-color: rgb(255, 0, 0) !important;
+}

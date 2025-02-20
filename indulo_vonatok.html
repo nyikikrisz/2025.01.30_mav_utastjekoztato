@@ -9,15 +9,35 @@
 <body>
     <table>
         <thead>
-            <tr>
-                <th>08:43:10</th>
+            <tr id="elso">
+                <th>
+                    <body onload="startTime()">
+                    <div id="txt"></div>
+                    
+                    <script>
+                    function startTime() {
+                      const today = new Date();
+                      let h = today.getHours();
+                      let m = today.getMinutes();
+                      let s = today.getSeconds();
+                      m = checkTime(m);
+                      s = checkTime(s);
+                      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+                      setTimeout(startTime, 1000);
+                    }
+                    
+                    function checkTime(i) {
+                      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                      return i;
+                    }
+                    </script>
+                </th>
                 <th>Indulás</th>
-                <th>Induló járatok</th>
-                <th></th>
-                <th>Departures</th>
-                <th><img src="BSicon_MAV.svg" alt="logo" height="40" title="Máv logo"></th>
+                <th colspan="2">Induló járatok</th>
+                <th colspan="2">Érkező Járatok</th>
+                <th rowspan="2" style="background-color:rgb(0, 150, 12);"><img src="BSicon_MAV.svg" alt="logo" height="40" title="Máv logo"></th>
             </tr>
-            <tr>
+            <tr >
                 <th>Tervezett indulás</th>
                 <th>Valós indulás</th>
                 <th>Vonat</th>
@@ -28,13 +48,13 @@
         </thead>
 
         <tbody>
-            <tr class="masodiksorok">
+            <tr>
                 <td>08:31</td>
-                <td>08:43</td>
+                <td id="keso_indulo_vonat">08:43</td>
                 <td>717</td>
                 <td>Budapest-Nyugati</td>
                 <td>Kecskemét-cegléd</td>
-                <td>5</td>
+                <td colspan="2">5</td>
             </tr>
             <tr>
                 <td>08:33</td>
@@ -42,7 +62,7 @@
                 <td>7022</td>
                 <td>Szeged</td>
                 <td>Kistelek-Szatymaz</td>
-                <td>4</td>
+                <td colspan="2">4</td>
             </tr>
             <tr>
                 <td>09:30</td>
@@ -50,7 +70,7 @@
                 <td>712</td>
                 <td>Szeged</td>
                 <td>Kistelek-Szatymaz</td>
-                <td>3</td>
+                <td colspan="2">3</td>
             </tr>
             <tr>
                 <td>09:31</td>
@@ -58,7 +78,7 @@
                 <td>727</td>
                 <td>Budapest-Nyugati</td>
                 <td>Kecskemét-cegléd</td>
-                <td>5</td>
+                <td colspan="2">5</td>
             </tr>
             <tr>
                 <td>09:44</td>
@@ -66,9 +86,10 @@
                 <td>7897</td>
                 <td>Külsőhalas</td>
                 <td></td>
-                <td>3</td>
+                <td colspan="2">3</td>
             </tr>
         </tbody>
     </table>
+    <a href="index.html">index.html</a>
 </body>
 </html>

@@ -103,6 +103,29 @@
                 <td colspan="2">5</td>
             </tr>
 ```
+## css🎨
+```css
+table, th, td {  
+    /* betűszín */
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    width: auto;
+    height: 5px;
+  }
+  th{
+    background-color:rgb(92, 92, 92);
+    color: white;
+  }
+  #keses{
+    background-color: red;
+  }
+   td {
+  border-collapse: collapse, 5px, solid, black;
+  }
+  .elsooszlop {
+    background-color: rgb(0, 105, 105);
+  }
+  ```
 ## Használat 
 Nyisd meg a linket és ott van 👁️👄👁️ </p>
 [link: index](https://nyikikrisz.github.io/2025.01.30_mav_utastjekoztato/indulo_vonatok.html)</p>
